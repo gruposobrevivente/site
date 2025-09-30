@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutoriais - Grupo Sobrevivente</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Tutoriais - Grupo Sobrevivente</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="diy.html">Tutoriais</a></li>
+        <li><a href="loja.html">Loja</a></li>
+        <li><a href="diario.html">Diário</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Faça Você Mesmo</h2>
+
+      <article>
+        <h3>Fogareiro de Lata com Álcool</h3>
+
+        <div class="video-container">
+          <!-- Vídeo rodando direto -->
+          <iframe 
+            width="100%" 
+            height="315" 
+            src="https://www.youtube-nocookie.com/embed/aETXmHd2vVM?rel=0&autoplay=0" 
+            title="Fogareiro de Lata com Álcool" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <p id="descricao-video">
+          Carregando descrição do vídeo...
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Grupo Sobrevivente. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Script para puxar a descrição automaticamente -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const videoId = "aETXmHd2vVM";
+      const apiKey = "SUA_API_KEY_AQUI"; // <-- coloque sua chave da API do YouTube
+
+      fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${apiKey}`)
+        .then(res => res.json())
+        .then(data => {
+          if(data.items && data.items.length > 0){
+            const descricao = data.items[0].snippet.description;
+            document.getElementById("descricao-video").innerText = descricao;
+          } else {
+            document.getElementById("descricao-video").innerText = "Descrição não disponível.";
+          }
+        })
+        .catch(() => {
+          document.getElementById("descricao-video").innerText = "Não foi possível carregar a descrição.";
+        });
+    });
+  </script>
+</body>
+</html>

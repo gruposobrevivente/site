@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loja - Grupo Sobrevivente</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Loja - Grupo Sobrevivente</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="diy.html">Tutoriais</a></li>
+      <li><a href="loja.html">Loja</a></li>
+      <li><a href="diario.html">Diário</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+    <section>
+      <h2>Produtos Artesanais de Sobrevivência</h2>
+
+      <div class="produto">
+        <img src="assets/fogareiro-lata.jpg" alt="Fogareiro portátil artesanal">
+        <h3>Fogareiro de Lata Compacto</h3>
+        <p>Ideal para acampamentos ou emergências. Funciona com álcool ou óleo usado.</p>
+        <span class="preco">R$ 25,00</span>
+        <button onclick="comprarProduto('Fogareiro de Lata Compacto')">Comprar</button>
+      </div>
+
+      <div class="produto">
+        <img src="assets/vela-longaduracao.jpg" alt="Vela de longa duração artesanal">
+        <h3>Vela de Longa Duração</h3>
+        <p>Feita com cera reciclada e pavio de algodão. Ilumina por até 20 horas.</p>
+        <span class="preco">R$ 15,00</span>
+        <button onclick="comprarProduto('Vela de Longa Duração')">Comprar</button>
+      </div>
+
+      <div class="produto">
+        <img src="assets/kit-purificador.jpg" alt="Kit de purificação de água">
+        <h3>Kit Purificador de Água</h3>
+        <p>Inclui carvão ativado, areia e manta para montagem rápida de filtro PET.</p>
+        <span class="preco">R$ 30,00</span>
+        <button onclick="comprarProduto('Kit Purificador de Água')">Comprar</button>
+      </div>
+
+      <div class="produto">
+        <img src="assets/sabonete-natural.jpg" alt="Sabonete natural artesanal">
+        <h3>Sabonete Natural Multiuso</h3>
+        <p>Sabonete biodegradável para corpo, utensílios ou roupas em campo.</p>
+        <span class="preco">R$ 12,00</span>
+        <button onclick="comprarProduto('Sabonete Natural Multiuso')">Comprar</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Grupo Sobrevivente. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Modal do carrinho -->
+  <div id="modal-carrinho" class="modal-carrinho oculto">
+    <div class="carrinho-conteudo">
+      <h3>Itens no carrinho:</h3>
+      <ul id="lista-carrinho"></ul>
+      <button onclick="fecharCarrinho()">Fechar</button>
+    </div>
+  </div>
+</body>
+</html>
