@@ -5,7 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog - Grupo Sobrevivente</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #222;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    article { 
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem; 
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    article img { 
+      width: 100%; 
+      max-width: 100%; 
+      border-radius: 8px; 
+      display: block; 
+      margin: 0.5rem 0 1rem 0; 
+    }
+    .texto-extra { 
+      max-height: 0; 
+      overflow: hidden; 
+      transition: max-height 0.5s ease;
+      margin-top: 0.5rem;
+    }
+    .texto-extra.open { 
+      max-height: 500px; /* Ajuste conforme o tamanho do conteúdo */
+    }
+    button.ler-mais {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: background 0.3s;
+    }
+    button.ler-mais:hover { 
+      background-color: #555; 
+    }
+    .texto-extra p {
+      margin: 0.5rem 0;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -26,55 +103,129 @@
     <section>
       <h2>Últimos Artigos</h2>
 
-      <article>
-        <h3>Como montar seu primeiro kit de emergência com R$ 100</h3>
-        <img src="assets/kit-emergencia.jpg" alt="Kit de emergência básico" style="width:100%; max-width:600px; border-radius:8px;">
-        <p>
-          Itens como lanternas simples, isqueiros, alimentos não perecíveis e purificadores de água caseiros são acessíveis e funcionais.
-          <span class="texto-extra oculto"> Esse kit básico pode ser adquirido em supermercados e lojas populares. O mais importante é a funcionalidade, e não o preço.</span>
-        </p>
-        <button onclick="toggleTexto(this)">Ler mais</button>
-      </article>
+<article id="como-montar-seu-primeiro-kit-emergência-com-R-100">
+  <h3>Como montar seu primeiro kit de emergência com R$ 100</h3>
+  <p class="meta">Publicado em <time datetime="2025-09-15">15/09/2025</time> • por <span>Grupo Sobrevivente</span></p>
+  <img src="image/Como-montar-seu-primeiro-kit-emergência-com-R$-100.png" alt="Kit de emergência básico">
+  
+  <p class="lead">Muita gente acha que preparar um kit custa caro. Mas com apenas R$ 100 já é possível começar a se organizar para emergências.</p>
+  
+  <div class="texto-extra">
+    <p>Itens como lanternas simples, isqueiros, alimentos não perecíveis e purificadores de água caseiros são acessíveis e funcionais.</p>
+    <h4>Itens indispensáveis</h4>
+    <ul>
+      <li>Lanterna pequena com pilhas extras</li>
+      <li>Isqueiro ou fósforos</li>
+      <li>Água potável em garrafas PET</li>
+      <li>Alimentos enlatados</li>
+      <li>Kit de primeiros socorros básico</li>
+    </ul>
+    <p>Esse kit básico pode ser adquirido em supermercados e lojas populares. O mais importante é a funcionalidade, e não o preço.</p>
+    <p>Inclua também itens úteis, como cobertores térmicos e sacos de água potável. Organize tudo em uma mochila compacta para fácil transporte.</p>
+  </div>
 
-      <article>
-        <h3>Purificador de água caseiro: segurança com materiais simples</h3>
-        <img src="assets/purificador-caseiro.jpg" alt="Purificador de água com garrafa PET" style="width:100%; max-width:600px; border-radius:8px;">
-        <p>
-          Monte um sistema eficiente usando carvão ativado, areia e garrafas PET. Uma solução prática e barata para emergências.
-          <span class="texto-extra oculto"> Com um filtro de três camadas, é possível melhorar muito a qualidade da água de fontes improvisadas, como chuva ou rios.</span>
-        </p>
-        <button onclick="toggleTexto(this)">Ler mais</button>
-      </article>
+  <div class="acoes-artigo">
+    <button class="ler-mais">Ler mais</button>
+    <button class="compartilhar">📢 Compartilhar</button>
+  </div>
+</article>
 
-      <article>
-        <h3>O que é sobrevivencialismo e por que começar hoje?</h3>
-        <img src="assets/sobrevivencialismo.jpg" alt="Sobrevivencialista observando paisagem natural" style="width:100%; max-width:600px; border-radius:8px;">
-        <p>
-          Sobrevivencialismo é preparação prática para tempos difíceis, e não paranoia ou medo. É aprender a viver melhor com menos.
-          <span class="texto-extra oculto"> Estocar alimentos, treinar habilidades e se adaptar à escassez são apenas parte da jornada sobrevivencialista.</span>
-        </p>
-        <button onclick="toggleTexto(this)">Ler mais</button>
-      </article>
+<article id="purificador-caseiro">
+  <h3>Purificador de água caseiro: segurança com materiais simples</h3>
+  <p class="meta">Publicado em <time datetime="2025-09-18">18/09/2025</time> • por <span>Grupo Sobrevivente</span></p>
+  
+  <img src="image/purificador-caseiro.png" alt="Purificador de água com garrafa PET">
+  
+  <p class="lead">Em situações de emergência, a água limpa é mais valiosa que qualquer outro recurso. Um purificador caseiro é barato, prático e pode salvar vidas.</p>
+  
+  <div class="texto-extra">
+    <p>Monte um sistema eficiente usando carvão ativado, areia e garrafas PET. Uma solução acessível e rápida para garantir mais segurança no consumo de água.</p>
+    <h4>Como funciona o filtro</h4>
+    <p>Com um filtro de três camadas, é possível melhorar significativamente a qualidade da água de fontes improvisadas, como chuva, poças ou rios.</p>
+    
+    <h4>Cuidados importantes</h4>
+    <ul>
+      <li>Sempre ferver a água após a filtragem para eliminar micro-organismos.</li>
+      <li>Substituir o carvão ativado a cada 30 dias de uso.</li>
+      <li>Manter a garrafa e o sistema bem higienizados.</li>
+    </ul>
+    
+    <p>Esse processo não transforma água contaminada em potável 100%, mas aumenta muito a segurança até que um tratamento mais eficaz esteja disponível.</p>
+  </div>
 
-      <article>
-        <h3>5 erros comuns de iniciantes no mundo da preparação</h3>
-        <img src="assets/erros-iniciantes.jpg" alt="Itens desorganizados em um kit" style="width:100%; max-width:600px; border-radius:8px;">
-        <p>
-          Comprar itens caros, esquecer dos treinos e desprezar o conhecimento são erros típicos. Comece com o básico.
-          <span class="texto-extra oculto"> A preparação exige conhecimento, prática constante e disciplina. É mais sobre atitude do que sobre ter tudo pronto.</span>
-        </p>
-        <button onclick="toggleTexto(this)">Ler mais</button>
-      </article>
+  <div class="acoes-artigo">
+    <button class="ler-mais">Ler mais</button>
+    <button class="compartilhar">📢 Compartilhar</button>
+  </div>
+</article>
 
-      <article>
-        <h3>Como preparar sua casa para apagões e emergências</h3>
-        <img src="assets/energia-alternativa.jpg" alt="Lanterna e velas em cima da mesa durante apagão" style="width:100%; max-width:600px; border-radius:8px;">
-        <p>
-          Geradores, lanternas, estoques de água e kits de primeiros socorros são essenciais para sua segurança em casa.
-          <span class="texto-extra oculto"> Uma boa preparação doméstica envolve também conhecer sua vizinhança, rotas de fuga e práticas seguras de armazenamento.</span>
-        </p>
-        <button onclick="toggleTexto(this)">Ler mais</button>
-      </article>
+<article id="sobrevivencialismo-comeco">
+  <h3>O que é sobrevivencialismo e por que começar hoje?</h3>
+  <p class="meta">Publicado em <time datetime="2025-09-20">20/09/2025</time> • por <span>Grupo Sobrevivente</span></p>
+  
+  <img src="image/sobrevivencialismo-comeco.jpg" alt="Sobrevivencialista observando paisagem natural">
+  
+  <p class="lead">Sobrevivencialismo não é sobre medo ou paranoia. É sobre se preparar de forma prática para tempos difíceis e aprender a viver melhor com menos.</p>
+  
+  <div class="texto-extra">
+    <h4>O que significa ser sobrevivencialista?</h4>
+    <p>Estocar alimentos, treinar habilidades e se adaptar à escassez são apenas parte da jornada sobrevivencialista. O foco está em desenvolver autonomia e resiliência.</p>
+    
+    <h4>Por onde começar</h4>
+    <ul>
+      <li>Aprender primeiros socorros para lidar com emergências.</li>
+      <li>Estudar cultivo de alimentos e formas de armazenamento.</li>
+      <li>Praticar segurança doméstica e comunitária.</li>
+    </ul>
+    
+    <h4>O poder da prática</h4>
+    <p>A prática constante transforma conhecimento em ação eficiente. Cada pequena habilidade aprendida fortalece sua confiança e aumenta suas chances em cenários adversos.</p>
+  </div>
+
+  <div class="acoes-artigo">
+    <button class="ler-mais">Ler mais</button>
+    <button class="compartilhar">📢 Compartilhar</button>
+  </div>
+</article>
+
+<article id="5-erros-iniciantes">
+  <h3>5 erros comuns de iniciantes no mundo da preparação</h3>
+  <p class="meta">Publicado em <time datetime="2025-09-10">10/09/2025</time> • por <span>Grupo Sobrevivente</span></p>
+  
+  <img src="image/5-erros-iniciantes.png" alt="Itens desorganizados em um kit">
+  
+  <p class="lead">Comprar itens caros, esquecer dos treinos e desprezar o conhecimento são erros típicos. Comece com o básico.</p>
+  
+  <div class="texto-extra">
+    <p>A preparação exige conhecimento, prática constante e disciplina. É mais sobre atitude do que sobre ter tudo pronto.</p>
+    <p>Comece com kits pequenos, registre suas experiências e aprenda com erros simples antes de investir pesado. Gradualmente, você poderá expandir seu equipamento e habilidades.</p>
+  </div>
+
+  <div class="acoes-artigo">
+    <button class="ler-mais">Ler mais</button>
+    <button class="compartilhar">📢 Compartilhar</button>
+  </div>
+</article>
+
+
+<article id="preparar-casa-apagoes">
+  <h3>Como preparar sua casa para apagões e emergências</h3>
+  <p class="meta">Publicado em <time datetime="2025-09-12">12/09/2025</time> • por <span>Grupo Sobrevivente</span></p>
+  
+  <img src="image/energia-alternativa.png" alt="Lanterna e velas em cima da mesa durante apagão">
+  
+  <p class="lead">Geradores, lanternas, estoques de água e kits de primeiros socorros são essenciais para sua segurança em casa.</p>
+  
+  <div class="texto-extra">
+    <p>Uma boa preparação doméstica envolve também conhecer sua vizinhança, rotas de fuga e práticas seguras de armazenamento.</p>
+    <p>Mantenha uma lista de contatos de emergência e treine simulações de apagão para toda a família. Assim todos saberão como agir de forma segura e eficiente.</p>
+  </div>
+
+  <div class="acoes-artigo">
+    <button class="ler-mais">Ler mais</button>
+    <button class="compartilhar">📢 Compartilhar</button>
+  </div>
+</article>
 
     </section>
   </main>
@@ -82,5 +233,76 @@
   <footer>
     <p>&copy; 2025 Grupo Sobrevivente. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const botoes = document.querySelectorAll('.ler-mais');
+  botoes.forEach(botao => {
+    botao.addEventListener('click', () => {
+      const article = botao.closest('article');
+      const textoExtra = article.querySelector('.texto-extra');
+      if (!textoExtra) return;
+
+      textoExtra.classList.toggle('open');
+      botao.textContent = textoExtra.classList.contains('open') ? 'Ler menos' : 'Ler mais';
+    });
+  });
+});
+  </script>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Botão Ler Mais
+  const botoes = document.querySelectorAll('.ler-mais');
+  botoes.forEach(botao => {
+    botao.addEventListener('click', () => {
+      const article = botao.closest('article');
+      const textoExtra = article.querySelector('.texto-extra');
+      if (!textoExtra) return;
+
+      textoExtra.classList.toggle('open');
+      botao.textContent = textoExtra.classList.contains('open') ? 'Ler menos' : 'Ler mais';
+    });
+  });
+
+  // Botão Compartilhar
+  const compartilharBtns = document.querySelectorAll('.compartilhar');
+  compartilharBtns.forEach(botao => {
+    botao.addEventListener('click', () => {
+      const article = botao.closest('article');
+      const titulo = article.querySelector('h3').innerText;
+      const url = window.location.href + "#" + article.id;
+
+      if (navigator.share) {
+        // Se o navegador suporta compartilhamento nativo
+        navigator.share({
+          title: titulo,
+          text: "Confira este artigo do Grupo Sobrevivente:",
+          url: url
+        }).catch(err => console.log("Erro ao compartilhar:", err));
+      } else {
+        // Caso não tenha suporte (desktop por exemplo)
+        const links = `
+          <div style="padding:10px;">
+            <p>Compartilhar:</p>
+            <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(titulo + " - " + url)}" target="_blank">WhatsApp</a><br>
+            <a href="mailto:?subject=${encodeURIComponent(titulo)}&body=${encodeURIComponent(url)}" target="_blank">Gmail</a><br>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}" target="_blank">Facebook</a><br>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(titulo)}" target="_blank">LinkedIn</a>
+          </div>
+        `;
+        const novaJanela = window.open("", "Compartilhar", "width=400,height=400");
+        novaJanela.document.write(links);
+      }
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const diyLink = document.querySelector('nav a[href="diy.html"]');
+  if (diyLink) diyLink.remove();
+});
+
+</script>
+
 </body>
 </html>

@@ -27,52 +27,50 @@
       <h2>Faça Você Mesmo</h2>
 
       <article>
-        <h3>Fogareiro de Lata com Álcool</h3>
+        <h3>Fogareiro de Lata de bebidas</h3>
+        <p>
+          Transforme uma simples lata em um fogareiro funcional usando álcool, óleo usado ou combustíveis sólidos. Ideal para situações de emergência.
+        </p>
 
         <div class="video-container">
-          <!-- Vídeo rodando direto -->
+          <!-- Vídeo do YouTube embutido diretamente -->
           <iframe 
-            width="100%" 
+            width="560" 
             height="315" 
-            src="https://www.youtube-nocookie.com/embed/aETXmHd2vVM?rel=0&autoplay=0" 
+            src="https://www.youtube-nocookie.com/embed/aETXmHd2vVM" 
             title="Fogareiro de Lata com Álcool" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
           </iframe>
         </div>
-
-        <p id="descricao-video">
-          Carregando descrição do vídeo...
-        </p>
       </article>
+
+      <article>
+        <h3>Plantando Tomate Cereja!</h3>
+        <p>
+          No vídeo de estreia do Grupo Sobrevivente tentamos trazer toda a essência do nosso novo projeto, eu iniciei uma mini plantação em vasos de plantas na minha casa, espero que gostem!
+        </p>
+
+        <div class="video-container">
+          <!-- Vídeo do YouTube embutido diretamente -->
+          <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube-nocookie.com/embed/se2qANOKqEE" 
+            title="Fogareiro de Lata com Álcool" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </article>
+
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Grupo Sobrevivente. Todos os direitos reservados.</p>
   </footer>
-
-  <!-- Script para puxar a descrição automaticamente -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const videoId = "aETXmHd2vVM";
-      const apiKey = "SUA_API_KEY_AQUI"; // <-- coloque sua chave da API do YouTube
-
-      fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${apiKey}`)
-        .then(res => res.json())
-        .then(data => {
-          if(data.items && data.items.length > 0){
-            const descricao = data.items[0].snippet.description;
-            document.getElementById("descricao-video").innerText = descricao;
-          } else {
-            document.getElementById("descricao-video").innerText = "Descrição não disponível.";
-          }
-        })
-        .catch(() => {
-          document.getElementById("descricao-video").innerText = "Não foi possível carregar a descrição.";
-        });
-    });
-  </script>
 </body>
 </html>
